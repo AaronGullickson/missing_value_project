@@ -1,0 +1,24 @@
+---
+title: "Missing Values Analysis"
+author: "Your name here"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(ggplot2)
+library(tidyverse)
+library(texreg)
+library(mice)
+load("output","cces.RData")
+```
+
+## Case Deletion
+
+Try estimating the models using available case analysis and complete case analysis. How do the results compare?
+
+
+## Imputation
+
+Use `mice` to create five complete datasets. Now run the same models across the complete datasets and pool the results. How do these results compare to those estimated with the case deletion approach?
